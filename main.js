@@ -1,4 +1,4 @@
-//declaration
+//declarations
 const main = document.getElementById("main");
 const userName = document.getElementById("usernamesignup");
 const password = document.getElementById("passwordsignup");
@@ -22,6 +22,7 @@ const right = () => {
     correct.style.padding = "30px";
 }
 
+//wrong function
 const wrong = () => {
     let incorrect = document.createElement("div");
     incorrect.appendChild(document.createTextNode("the username and password is wrong".toLocaleUpperCase()));
@@ -33,7 +34,7 @@ const wrong = () => {
     incorrect.style.padding = "30px";
 }
 
-//
+//first condition
 function ross() {
     if(userName.value.length > 0 && password.value.length > 0){
         wrong();
