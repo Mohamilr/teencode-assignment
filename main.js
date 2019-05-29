@@ -33,21 +33,25 @@ const wrong = () => {
     incorrect.style.padding = "30px";
 }
 
+//
+function ross() {
+    if(userName.value.length > 0 && password.value.length > 0){
+        wrong();
+    }
+}
+
 function signIn(event){
-    event.preventDefault();
+    // event.preventDefault();
    
     if(userName.value === profile.name && password.value === profile.pass){
         right();
-        console.log("ok");
-       
     }
     else if(userName.value !== profile.name || password.value !== profile.pass){
-        wrong();
-        console.log("bad");
+        ross();
     }
 
     userName.value = "";
     password.value = "";
 }
-
+//event listener
 submit.addEventListener("click", signIn);
