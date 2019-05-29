@@ -8,37 +8,40 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div id="register" class="animate form">
-      <form autocomplete="on">
-        <h1>Teencode Login</h1>
-        <p>
-          <label for="usernamesignup" class="uname" 
-            >Your username</label
-          >
-          <input
-            id="usernamesignup"
-            name="usernamesignup"
-            required="required"
-            type="text"
-            placeholder="mysuperusername690"
-          />
-        </p>
-        <p>
-          <label for="passwordsignup" class="youpasswd"
-            >Your password
-          </label>
-          <input
-            id="passwordsignup"
-            name="passwordsignup"
-            required="required"
-            type="password"
-            placeholder="eg. X8df!90EO"
-          />
-        </p>
-        <p class="signin">
-          <input type="submit" value="Login" />
-        </p>
-      </form>
+    <div id="main">
+        <div id="register" class="animate form">
+            <form autocomplete="on">
+              <h1>Teencode Login</h1>
+              <p>
+                <label for="usernamesignup" class="uname" 
+                  >Your username</label
+                >
+                <input
+                  id="usernamesignup"
+                  name="usernamesignup"
+                  required="required"
+                  type="text"
+                  placeholder="mysuperusername690"
+                />
+              </p>
+              <p>
+                <label for="passwordsignup" class="youpasswd"
+                  >Your password
+                </label>
+                <input
+                  id="passwordsignup"
+                  name="passwordsignup"
+                  required="required"
+                  type="password"
+                  placeholder="eg. X8df!90EO"
+                />
+              </p>
+              <p class="signin">
+                <input type="submit" value="Login" id="submit"/>
+              </p>
+            </form>
+          </div>
     </div>
+    <script src="./main.js"></script>
   </body>
 </html>
