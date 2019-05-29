@@ -20,6 +20,9 @@ document.querySelectorAll('.container').forEach(item => {
     item.style.backgroundColor = 'green';
 });
 
+//Answer
+document.querySelectorAll("p").forEach(paragraph => paragraph.style.padding = "20px 50px");
+
 // Click evenxt
 document.querySelector('button').addEventListener('click', () => window.location.href = 'index2.html');
 
