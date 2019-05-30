@@ -10,45 +10,37 @@ const profile = {
     pass : "admin123"
 };
 
+//message declaration
+const message = document.createElement("div"); 
+main.appendChild(message);
+//message style
+message.style.textAlign = "center";
+message.style.color = "#ffffff";
+message.style.padding = "30px";
+
+
 //success function
 const right = () => {
-    let correct = document.createElement("div");
-    correct.appendChild(document.createTextNode("the username and password is correct".toLocaleUpperCase()));
-    main.appendChild(correct);
-     // success style
-    correct.style.backgroundColor = "green";
-    correct.style.textAlign = "center";
-    correct.style.color = "#ffffff";
-    correct.style.padding = "30px";
+    message.textContent = "the username and password is correct".toUpperCase();
+    //correct style 
+    message.style.backgroundColor = "green";
 }
 
 //wrong function
 const wrong = () => {
-    let incorrect = document.createElement("div");
-    incorrect.appendChild(document.createTextNode("the username and password is wrong".toLocaleUpperCase()));
-    main.appendChild(incorrect);
-    // wrong style
-    incorrect.style.backgroundColor = "red",
-    incorrect.style.textAlign = "center";
-    incorrect.style.color = "#ffffff";
-    incorrect.style.padding = "30px";
-}
-
-//first condition
-function ross() {
-    if(userName.value.length > 0 && password.value.length > 0){
-        wrong();
-    }
+    message.textContent = "the username and password is incorrect".toUpperCase();
+    //incorrect style
+    message.style.backgroundColor = "red";
 }
 
 function signIn(event){
     // event.preventDefault();
-   
+    
     if(userName.value === profile.name && password.value === profile.pass){
-        right();
+        right();     
     }
     else if(userName.value !== profile.name || password.value !== profile.pass){
-        ross();
+        wrong();
     }
 
     userName.value = "";
