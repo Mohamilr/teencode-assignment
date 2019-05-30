@@ -28,7 +28,7 @@ const right = () => {
 
 //wrong function
 const wrong = () => {
-    message.textContent = "the username and password is incorrect".toUpperCase();
+    message.textContent = "the username and password is wrong".toUpperCase();
     //incorrect style
     message.style.backgroundColor = "red";
 }
