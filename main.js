@@ -19,28 +19,18 @@ message.style.color = "#ffffff";
 message.style.padding = "30px";
 
 
-//success function
-const right = () => {
-    message.textContent = "the username and password is correct".toUpperCase();
-    //correct style 
-    message.style.backgroundColor = "green";
-}
-
-//wrong function
-const wrong = () => {
-    message.textContent = "the username and password is wrong".toUpperCase();
-    //incorrect style
-    message.style.backgroundColor = "red";
-}
-
-function signIn(event){
+function signIn(){
     // event.preventDefault();
     
     if(userName.value === profile.name && password.value === profile.pass){
-        right();     
+        message.textContent = "the username and password is correct".toUpperCase();
+        //correct style 
+        message.style.backgroundColor = "green";    
     }
     else if(userName.value !== profile.name || password.value !== profile.pass){
-        wrong();
+        message.textContent = "the username and password is wrong".toUpperCase();
+        //incorrect style
+        message.style.backgroundColor = "red";
     }
 
     userName.value = "";
